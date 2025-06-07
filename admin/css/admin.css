@@ -1,0 +1,178 @@
+/* admin/css/admin.css - V2: Layout com Navbar Horizontal */
+
+/* --- Importação de Fonte e Variáveis de Cor --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #32de84;
+    --primary-hover-color: #2cc171;
+    --background-color: #121212;
+    --surface-color: #1e1e1e;
+    --text-color: #ffffff;
+    --text-secondary-color: #a0a0a0;
+    --border-color: #333333;
+    --danger-color: #e34040;
+    --success-color: #198754;
+}
+
+/* --- Estilos Gerais --- */
+body {
+    background-color: var(--background-color);
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+}
+
+/* --- Navbar Horizontal do Admin --- */
+.admin-navbar {
+    background-color: var(--surface-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.admin-navbar .navbar-brand {
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.admin-navbar .navbar-brand span {
+    color: var(--primary-color);
+}
+
+.admin-navbar .nav-link {
+    color: var(--text-secondary-color);
+    font-weight: 500;
+}
+
+.admin-navbar .nav-link.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.admin-navbar .nav-link:hover {
+    color: var(--text-color);
+}
+
+.admin-navbar .dropdown-menu {
+    background-color: var(--surface-color);
+    border-color: var(--border-color);
+}
+
+.admin-navbar .dropdown-item {
+    color: var(--text-secondary-color);
+}
+.admin-navbar .dropdown-item:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+/* --- Conteúdo Principal --- */
+.main-content h2 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+/* --- Estilo dos Painéis (Formulário e Tabela) --- */
+.admin-panel {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* --- Estilo do Formulário --- */
+.form-control, .form-select {
+    background-color: #2a2a2a;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+.form-control:focus, .form-select:focus {
+    background-color: #2a2a2a;
+    color: var(--text-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(50, 222, 132, 0.2);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #121212;
+    font-weight: 600;
+}
+.btn-primary:hover {
+    background-color: var(--primary-hover-color);
+    border-color: var(--primary-hover-color);
+}
+
+/* --- Estilo da Tabela --- */
+.table {
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+.table th {
+    color: var(--text-secondary-color);
+    border-bottom-width: 1px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.table .badge {
+    font-weight: 500;
+    padding: 0.4em 0.7em;
+}
+
+.badge.bg-success {
+    background-color: rgba(25, 135, 84, 0.2) !important;
+    color: #3dd286 !important;
+}
+
+.badge.bg-secondary {
+    background-color: rgba(108, 117, 125, 0.2) !important;
+    color: #a0a0a0 !important;
+}
+
+/* Estilo dos botões de ação na tabela */
+.table .btn-sm {
+    font-weight: 500;
+}
+.table .btn-success {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+}
+.table .btn-danger {
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+}
+.table .btn-info {
+    background-color: transparent;
+    border-color: var(--primary-color); /* CORRIGIDO */
+    color: var(--primary-color); /* CORRIGIDO */
+}
+.table .btn-info:hover {
+    background-color: var(--primary-color); /* CORRIGIDO */
+    color: var(--background-color);
+}
+
+/* Estilo para o botão de Editar (Amarelo) */
+.table .btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #121212;
+    font-weight: 500;
+}
+.table .btn-warning:hover {
+    background-color: #d39e00;
+    border-color: #c69500;
+}

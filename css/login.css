@@ -1,0 +1,171 @@
+/* login.css - Estilos para a página de Login */
+
+/* --- Importação de Fonte e Variáveis de Cor --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #32de84;
+    --primary-hover-color: #2cc171;
+    --background-color: #121212;
+    --surface-color: #1e1e1e;
+    --text-color: #ffffff;
+    --text-secondary-color: #a0a0a0;
+    --border-color: #333333;
+    --danger-color: #dc3545;
+}
+
+/* --- Estilos Gerais --- */
+body {
+    background-color: var(--background-color);
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Layout Principal Dividido --- */
+.auth-wrapper {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Painel da Esquerda (Branding/Ilustração) - Estilo Invertido */
+.auth-panel-left {
+    flex: 1;
+    background-color: var(--background-color); /* Fundo escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    color: var(--text-color);
+}
+
+.auth-panel-left .brand-content {
+    text-align: center;
+    z-index: 2;
+}
+
+.auth-panel-left h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.auth-panel-left h1 span {
+    color: var(--primary-color);
+}
+
+/* "Blob" verde no fundo do painel esquerdo */
+.auth-panel-left .blob {
+    position: absolute;
+    background: var(--primary-color);
+    width: 500px;
+    height: 500px;
+    border-radius: 45% 55% 60% 40% / 50% 45% 55% 50%; /* Forma de blob */
+    opacity: 0.15;
+    z-index: 1;
+}
+
+/* Painel da Direita (Formulário) - Idêntico ao do Registro */
+.auth-panel-right {
+    flex: 1;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 450px;
+}
+
+.form-container h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.form-container .subtitle {
+    color: var(--text-secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos dos Campos do Formulário */
+.form-label {
+    font-weight: 500;
+    color: var(--text-secondary-color);
+    margin-bottom: 0.25rem;
+}
+
+.form-control {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.75rem 1rem; /* Padding um pouco maior que o do registro */
+}
+
+.form-control:focus {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(50, 222, 132, 0.25);
+}
+
+/* Estilo do Botão */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #121212;
+    font-weight: 600;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover-color);
+    border-color: var(--primary-hover-color);
+}
+
+/* Alerta de Erro */
+.alert-danger {
+    background-color: rgba(220, 53, 69, 0.1);
+    border: 1px solid rgba(220, 53, 69, 0.5);
+    color: var(--danger-color);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+}
+
+/* Link inferior */
+.form-footer-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: var(--text-secondary-color);
+}
+
+.form-footer-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.form-footer-link a:hover {
+    text-decoration: underline;
+}
+
+/* --- Responsividade para telas menores --- */
+@media (max-width: 992px) {
+    .auth-panel-left {
+        display: none;
+    }
+    .auth-panel-right {
+        flex-basis: 100%;
+    }
+}
